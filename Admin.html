@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/bootstrap-theme.min.css" rel="stylesheet" />
+</head>
+<body>
+    <h3>Creat Symposium </h3>
+    <hr>
+    <div class="table-responsive">
+        <div class="bootstrap-table">
+            <div class="fixed-table-toolbar">
+                <div class="bars pull-left">
+                    <div id="toolbargrid">
+                        <div class="form-inline" role="form">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="toolbar clearfix">
+                <div class="toolbar-left">
+                    <button class="btn btn-primary">Creat Symposium</button>
+                    <div class="btn-group">
+                        <input type="button" value="Options > " class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="/broker/order/cancel/all_request">Cancel All Orders</a></li>
+                        </ul>
+                    </div>
+                    <div class="btn-group">
+                        <input type="button" value="Research Students > " class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="?order_filter=5">All Students</a></li>
+                            <li><a href="?order_filter=1">Approved students</a></li>
+                            <li><a href="?order_filter=2">Denied Students</a></li>
+                            <li><a href="?order_filter=3">Completed Proposals</a></li>
+                        </ul>
+                    </div>
+
+                    
+
+                </div>
+                <div class="toolbar-right">
+                    <div class="form-inline" role="form">
+                        <label for="dateStart">Date Start</label>
+                        <input value="01/01/2015" class="form-control" type="text" placeholder="Start Date" name="dateStart" id="dateStart">
+                        <script>$('#dateStart').datepicker({format: 'mm/dd/yyyy'});</script>
+                        <label for="dateStop">Date End</label>
+                        <input value="01/30/2015" class="form-control" type="text" placeholder="Stop Date" name="dateStop" id="dateStop">
+                        <script>$('#dateStop').datepicker({format: 'mm/dd/yyyy'});</script>
+                        <a class="btn btn-primary filter-dates" onclick="location.href = '/broker/order/view?dateStart='+$('#dateStart').val()+'&dateStop='+$('#dateStop').val(); ">Filter Dates</a>
+                        <input class="form-control table-search" type="text" placeholder="Search">
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="container">
+                <div class="row col-md-6 col-md-offset-2 custyle">
+                    <table class="table table-striped custab">
+                        <thead>
+                            <a href="#" class="btn btn-primary btn-xs pull-right"><b>+</b> Add new categories</a>
+                            <tr>
+                                <th>Symposium ID</th>
+                                <th>Symposium Name</th>
+                                <th>Location</th>
+                                <th>Time</th>
+                                <th>Date</th>
+                                <th class="text-center">Action</th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td>1</td>
+                            <td>CST Symposium</td>
+                            <td>Science Building</td>
+                            <td>3:00</td>
+                            <td>2/6/2017</td>
+                            <td class="text-center"><a class='btn btn-info btn-xs' href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a> <a href="#" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Del</a></td>
+                        </tr>
+                        
+                    </table>
+                </div>
+            </div>
+
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</body>
+</html>
