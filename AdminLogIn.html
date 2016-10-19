@@ -7,26 +7,53 @@
     <link href="Content/bootstrap-theme.min.css" rel="stylesheet" />
 </head>
 <body>
-    <div class="container">
-        <div class="card card-container">
-            <!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
 
-            <form class="form-signin">
-                <span id="reauth-email" class="reauth-email"></span>
-                <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-                <div id="remember" class="checkbox">
-                    <label>
-                        <input type="checkbox" value="remember-me"> Remember me
-                    </label>
+    <div class="container">
+        <div class="bs-example bs-navbar-top-example">
+            <nav role="navigation" class="navbar navbar-default navbar-fixed-top">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button data-target="#bs-example-navbar-collapse-6" data-toggle="collapse" class="navbar-toggle" type="button">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="#" class="navbar-brand">About</a>
                 </div>
 
-                <button onclick="location.href = 'Admin.html';" class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign in</button>
-            </form><!-- /form -->
-            <a href="#" class="forgot-password">
-                Forgot the password?
-            </a>
-        </div><!-- /card-container -->
-    </div><!-- /container -->
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div id="bs-example-navbar-collapse-6" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="Welcome.html">Home</a></li>
+                        <li><a href="StudentInfo.html">Student Registration</a></li>
+                        <li><a href="ProposalPage.html">Create Proposal</a></li>
+                        <li><a href="AdminLogIn.html">Admin</a></li>
+                        <li><a href="FacultyLogIn.html">Faculty Aprover</a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </nav>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="row">
+            <div style="margin-top:5%;" class="col-md-offset-5 col-md-3">
+                <div class="form-login">
+                    <h4>Admin Login.</h4>
+                    <input type="text" id="userName" class="form-control input-sm chat-input" placeholder="User Name" />
+                    <br />
+                    <input type="text" id="userPassword" class="form-control input-sm chat-input" placeholder="Password" />
+                    <br />
+                    <div class="wrapper">
+                        <span class="group-btn">
+                            <a href="Admin.html" class="btn btn-primary btn-md">login <i class="fa fa-sign-in"></i></a>
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
 </body>
 </html>
